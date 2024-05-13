@@ -1,0 +1,15 @@
+<!-- header.component.html -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col text-end">
+        <button *ngIf="!(isLoggedIn$ | async)" (click)="login()" class="btn btn-outline-primary mt-3">Login</button>
+        <button *ngIf="isLoggedIn$ | async" (click)="logout()" class="btn btn-outline-secondary mt-3">Logout</button>
+      </div>
+      
+    </div>
+  </div>
+  <hr>
+</header>
+<!-- Authentication Modal -->
+<app-authentication *ngIf="showAuthenticationModal" (modalClose)="closeAuthenticationModal()"></app-authentication>

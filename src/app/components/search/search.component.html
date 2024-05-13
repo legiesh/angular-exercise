@@ -1,0 +1,6 @@
+<!-- search.component.html -->
+
+<div class="search-container d-flex justify-content-center align-items-center">
+  <input type="text" [(ngModel)]="searchTerm" class="form-control form-control-lg" placeholder="Enter Company Name or Number..." (keyup.enter)="performSearch()">
+  <button (click)="performSearch()" class="btn btn-primary btn-lg" [disabled]="!isValidSearchTerm()">Search</button>
+</div>

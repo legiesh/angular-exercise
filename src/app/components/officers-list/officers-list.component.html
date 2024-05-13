@@ -1,0 +1,27 @@
+<!-- officers-list.component.html -->
+<div class="container mt-5">
+    <!-- Company Name and Number -->
+    <div class="row mb-3">
+      <div class="col">
+        <h3>{{ companyName }}</h3>
+        <p>Company Number: {{ companyNumber }}</p>
+      </div>
+    </div>
+  
+    <!-- List Officers -->
+    <div class="row">
+      <div class="col">
+        <h2>List Officers</h2>
+        <ul class="list-group">
+          <li class="list-group-item" *ngFor="let officer of officers">
+            <h4>{{ officer.name }}</h4>
+            <p>Occupation: 
+                <span *ngIf="officer.occupation">{{ officer.occupation }}</span>
+                <span *ngIf="!officer.occupation">NA</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

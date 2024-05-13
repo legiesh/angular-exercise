@@ -1,0 +1,36 @@
+<!-- company-details.component.html -->
+<div *ngIf="companyDetails" class="container mt-5">
+  <h2>{{ companyDetails.title }}</h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Company Number:</h5>
+      <p>{{ companyDetails.company_number }}</p>
+    </div>
+    <div class="col-md-6">
+      <h5>Company Status:</h5>
+      <p>{{ companyDetails.company_status }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <h5>Company Type:</h5>
+      <p>{{ companyDetails.company_type }}</p>
+    </div>
+    <div class="col-md-6">
+      <h5>Incorporated On:</h5>
+      <p>{{ companyDetails.date_of_creation }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h5>Registered Office Address:</h5>
+      <p>{{ companyDetails.address_snippet }}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">      
+      <a [routerLink]="['/officers', companyDetails.company_number]" class="btn btn-primary">List Officers</a>
+    </div>
+  </div>
+</div>

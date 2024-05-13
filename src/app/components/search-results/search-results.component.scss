@@ -1,0 +1,61 @@
+// search-results.component.scss
+.search-results {
+  h2 {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+
+  a{
+    text-decoration: none;    
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+
+}
+
+.no-results {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: #ff0000;
+}
+
+
+.hand-cursor {
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.page-link {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #dee2e6;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.page-link:hover {
+  background-color: #f8f9fa;
+}
+
+.page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
+}
